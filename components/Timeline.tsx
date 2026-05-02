@@ -154,6 +154,9 @@ export default function Timeline({ lang }: { lang: Lang }) {
         >
           {lang === "en" ? "SYSTEM_TIMELINE" : "精確任務時間軸"}
         </motion.h2>
+        <div className="font-mono text-primary text-xs font-bold mb-4 tracking-wider text-white/50">
+          {lang === "en" ? "Scroll down to see latest achievements ↓" : "往下滑看最新成果 ↓"}
+        </div>
 
         <div className="ml-2">
           {EVENTS.map((e, i) => (

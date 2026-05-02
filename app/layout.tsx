@@ -1,29 +1,37 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Inter } from "next/font/google";
 import "./globals.css";
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  weight: ["400", "700"],
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  weight: ["400", "700", "900"],
-});
 
 export const metadata: Metadata = {
   title: "LIN, SHU-JEN | Systems Architect",
   description:
     "Digital Twins & Embodied AI Infrastructure. NVIDIA GTC 2026 Exhibitor. Partnering with MSI Innovation Center.",
+  openGraph: {
+    title: "LIN, SHU-JEN | Systems Architect",
+    description:
+      "Digital Twins & Embodied AI Infrastructure. NVIDIA GTC 2026 Exhibitor. Partnering with MSI Innovation Center.",
+    url: "https://lin-shu-jen.example.com",
+    siteName: "LIN, SHU-JEN Portfolio",
+    images: [
+      {
+        url: "/assets/profile.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Profile portrait of LIN, SHU-JEN",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    site: "shujenlin",
+    creator: "shujenlin",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-bg`}>
+      <body className="font-sans bg-bg">
         {children}
       </body>
     </html>

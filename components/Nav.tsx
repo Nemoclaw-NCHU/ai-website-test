@@ -77,6 +77,7 @@ export default function Nav({ lang, setLang }: { lang: Lang; setLang: (l: Lang) 
           ))}
           <button
             onClick={() => setLang(lang === "en" ? "zh" : "en")}
+            aria-label="Switch language"
             className="font-mono text-[11px] text-white/35 hover:text-accent border border-white/10 hover:border-accent/40 px-3 py-1 rounded transition-all duration-300"
           >
             {lang === "en" ? "中文" : "EN"}
@@ -116,6 +117,7 @@ export default function Nav({ lang, setLang }: { lang: Lang; setLang: (l: Lang) 
               ))}
               <button
                 onClick={() => setLang(lang === "en" ? "zh" : "en")}
+                aria-label="Switch language"
                 className="text-left font-mono text-sm py-3 text-accent"
               >
                 {lang === "en" ? "切換中文" : "Switch to EN"}
